@@ -6,7 +6,9 @@
     "start": "rm -rf build && babel-node resources/server.js",
     "build": "rm -rf build && babel-node resources/build.js",
     "watch": "rm -rf build && babel-node resources/watch.js",
-    "test": "npm run build"
+    "test": "npm run build",
+    "snyk-protect": "snyk protect",
+    "prepublish": "npm run snyk-protect"
   },
   "babel": {
     "optional": [
@@ -36,6 +38,8 @@
     "codemirror-graphql": "^0.5.7",
     "graphql": "^0.7.0",
     "graphql-tools": "^0.6.6",
-    "marked": "^0.3.5"
-  }
+    "marked": "^0.3.5",
+    "snyk": "^1.47.0"
+  },
+  "snyk": true
 }
